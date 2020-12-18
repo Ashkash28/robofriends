@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import CardList from "../components/CardList";
 import SearchBox from "../components/SearchBox";
 import Scroll from "../components/Scroll";
+import Header from "../components/Header";
 import ErrorBoundary from "../components/ErrorBoundary";
 import "./App.css"
 import { setSearchField, requestRobots } from "../actions";
@@ -33,7 +34,7 @@ function App(props) {
 
     return !isPending ? (
         <div className='tc'>
-            <h1 className='f1'>RoboFriends</h1>
+            <Header />
             <button onClick={() => setCount(count + 1)}>Click Me!</button>
             <SearchBox searchChange={onSearchChange} />
             <Scroll>
